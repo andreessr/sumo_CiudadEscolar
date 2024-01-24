@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: rgb(149, 11, 11);  
+    color:white;  
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+
+.info-content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+.qr-code img {
+    max-width: 100%; /* Hace que la imagen del código QR no se extienda más allá del contenedor */
+    height: auto;
+}
+
+#galeria-sumo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    overflow-x: auto;
+}
+
+#galeria-sumo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: rgb(149, 11, 11);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
