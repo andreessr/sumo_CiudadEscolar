@@ -101,6 +101,10 @@ footer {
     #galeria-sumo img {
         margin-bottom: 10px;
     }
+    .social-icon {
+        width: 40px; 
+        height: 40px;
+    }
 
 
 }
