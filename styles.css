@@ -19,15 +19,15 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
+    align-items: center; 
 }
 
 .info-content {
-    flex: 1; /* Ocupa todo el espacio disponible */
+    flex: 1; 
 }
 
 .qr-code img {
-    max-width: 100%; /* Hace que la imagen del código QR no se extienda más allá del contenedor */
+    max-width: 100%; 
     height: auto;
 }
 
@@ -55,46 +55,53 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.social-icon {
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+}
 
-/* Estilos generales para pantallas más grandes */
+
 @media screen and (min-width: 600px) {
     body {
-        font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+        font-size: 16px; 
     }
 
     section {
-        flex-direction: row; /* Alinear horizontalmente en pantallas más grandes */
+        flex-direction: row;
     }
 
     .info-content {
-        margin-right: 20px; /* Agrega un espacio entre el contenido y el código QR */
+        margin-right: 20px; 
     }
 }
 
-/* Estilos para pantallas más pequeñas, como teléfonos móviles */
+
 @media screen and (max-width: 600px) {
     header {
-        font-size: 1.5em; /* Ajusta el tamaño de la fuente del encabezado para dispositivos móviles */
+        font-size: 1.5em; 
     }
 
     section {
-        flex-direction: column; /* Alinear verticalmente en pantallas más pequeñas */
+        flex-direction: column; 
     }
 
     .info-content {
-        margin-right: 0; /* Elimina el espacio entre el contenido y el código QR en pantallas pequeñas */
+        margin-right: 0; 
     }
 
     .qr-code {
-        margin-top: 20px; /* Agrega espacio encima del código QR en pantallas pequeñas */
+        margin-top: 20px; 
     }
 
     #galeria-sumo {
-        flex-wrap: wrap; /* Permite que las imágenes se envuelvan en pantallas pequeñas */
+        flex-wrap: wrap; 
     }
 
     #galeria-sumo img {
-        margin-bottom: 10px; /* Agrega espacio entre las imágenes en pantallas pequeñas */
+        margin-bottom: 10px;
     }
+
+
 }
 
