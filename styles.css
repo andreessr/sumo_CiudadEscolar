@@ -1,36 +1,61 @@
+/* Estilos generales */
+:root {
+    --primary-color: rgb(149, 11, 11);
+    --background-color: #fafafa;
+    --text-color: #333;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Reemplaza 'Roboto' con la fuente que prefieras */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
 }
 
+/* Estilos del encabezado */
 header {
-    background-color: rgb(149, 11, 11);  
-    color:white;  
+    background-color: var(--primary-color);
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+    font-family: 'Lato', sans-serif; /* Puedes cambiar 'Lato' con otra fuente para el encabezado */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Estilos de la sección de información */
 section {
-    margin: 20px;
+    margin: 40px;
     padding: 20px;
     background-color: #fff;
+    color: var(--text-color);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center; 
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 0.5s ease, transform 0.3s ease;
 }
 
 .info-content {
-    flex: 1; 
+    flex: 1;
 }
 
 .qr-code img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
+    border: 2px solid #ddd; /* Borde alrededor del código QR */
+    background-color: #fff; /* Fondo del código QR */
+    padding: 10px; /* Espaciado interno */
 }
 
+/* Estilos de la galería de sumo */
 #galeria-sumo {
     display: flex;
     justify-content: space-around;
@@ -42,70 +67,42 @@ section {
 #galeria-sumo img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-right: 10px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-right: 20px; /* Aumentado el margen derecho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+#galeria-sumo img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos del pie de página */
 footer {
-    background-color: rgb(149, 11, 11);
-    color: #fff;
+    background-color: var(--primary-color);
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     position: relative;
     bottom: 0;
     width: 100%;
 }
+
 .social-icon {
-    width: 40px; 
+    width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: filter 0.3s ease; /* Transición de filtro para el cambio de color */
 }
 
-
-@media screen and (min-width: 600px) {
-    body {
-        font-size: 16px; 
-    }
-
-    section {
-        flex-direction: row;
-    }
-
-    .info-content {
-        margin-right: 20px; 
-    }
+/* Estilo del enlace de Instagram */
+footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-
-@media screen and (max-width: 600px) {
-    header {
-        font-size: 1.5em; 
-    }
-
-    section {
-        flex-direction: column; 
-    }
-
-    .info-content {
-        margin-right: 0; 
-    }
-
-    .qr-code {
-        margin-top: 20px; 
-    }
-
-    #galeria-sumo {
-        flex-wrap: wrap; 
-    }
-
-    #galeria-sumo img {
-        margin-bottom: 10px;
-    }
-    .social-icon {
-        width: 40px; 
-        height: 40px;
-    }
-
-
+footer a:hover {
+    color: #ffd700; /* Cambia el color al pasar el mouse */
 }
-
