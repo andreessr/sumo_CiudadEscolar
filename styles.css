@@ -62,14 +62,24 @@ section {
     align-items: center;
     margin: 20px;
     overflow-x: auto;
+    white-space: nowrap; /* Evita que las imágenes se dividan en varias líneas */
+
+    /* Añade una regla de medios para dispositivos con ancho menor o igual a 600px */
+    @media (max-width: 600px) {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: flex-start; /* Alinea las imágenes al comienzo del contenedor */
+    }
+}
+
+#galeria-sumo .imagen-container {
+    margin-right: 20px;
+    margin-bottom: 20px; /* Añade margen inferior para separar las imágenes en dispositivos móviles */
 }
 
 #galeria-sumo img {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
-    margin-bottom: 20px;
-    margin-right: 20px; /* Aumentado el margen derecho */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -77,6 +87,9 @@ section {
 #galeria-sumo img:hover {
     transform: scale(1.1);
 }
+
+
+
 
 /* Estilos del pie de página */
 footer {
